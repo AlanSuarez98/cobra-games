@@ -1,0 +1,51 @@
+.bodyDashboard {
+  margin: 75px 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard {
+  width: 75%;
+  height: 600px;
+  background-color: white;
+  margin: 25px 0 0 0;
+  border-radius: 15px;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+.dashboard h1 {
+  padding: 20px;
+}
+.boxLists {
+  width: 95%;
+  height: 80%;
+  display: flex;
+  overflow: hidden;
+  background-color: rgb(225, 222, 222);
+  margin: 15px 0 0 0;
+}
+.listCards {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.listCards::-webkit-scrollbar {
+  width: 8px;
+}
+
+.listCards::-webkit-scrollbar-track {
+  background: rgb(225, 222, 222);
+  opacity: 50%;
+}
+
+.listCards::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}

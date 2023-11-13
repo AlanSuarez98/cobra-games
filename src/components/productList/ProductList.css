@@ -1,0 +1,57 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0 10px 30px 10px;
+}
+.card {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dateProduct {
+  width: 135px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reseña {
+  max-width: 350px;
+  text-align: center;
+}
+.btnSelect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btnSelect select {
+  text-align: center;
+  margin: 5px 0;
+}
+.containerReview {
+  display: flex;
+  flex-direction: column;
+}
+.containerButtons {
+  display: flex;
+  justify-content: center;
+}
+.btnModifyReview {
+  padding: 5px 10px;
+  margin: 5px 0px 0px;
+}
+.btnConfirmReview {
+  padding: 5px 10px;
+  margin: 5px 0px 0px;
+}
+.textReview {
+  width: 275px;
+  min-height: 50px;
+  max-height: 100px;
+  resize: none;
+}

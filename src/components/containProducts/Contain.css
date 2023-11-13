@@ -1,0 +1,8 @@
+.containProducts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 15px;
+  padding: 35px 0;
+  justify-content: center;
+}

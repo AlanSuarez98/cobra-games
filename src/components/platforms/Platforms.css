@@ -1,0 +1,11 @@
+.namePlatforms {
+  font-size: 12px;
+  background-color: goldenrod;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 2.5px;
+  font-weight: bold;
+  color: white;
+  font-family: Calibri, sans-serif;
+  overflow: hidden;
+}

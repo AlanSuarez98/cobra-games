@@ -1,0 +1,39 @@
+* {
+  font-family: Calibri, sans-serif;
+  overflow-x: hidden;
+}
+.containerReviews {
+  width: 100%;
+  margin: 100px 0 0 0;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.titleGame {
+  width: 100%;
+}
+.titleGame h1 {
+  font-size: 50px;
+  text-align: center;
+  color: black;
+}
+.containerUserReview {
+  min-width: 50%;
+  width: fit-content;
+  max-width: 100%;
+}
+.cardsReview {
+  width: 100%;
+  min-height: 100px;
+  height: fit-content;
+  max-height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.cardsReview h2 {
+  margin: 0 100px 0 0;
+}

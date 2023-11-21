@@ -1,34 +1,44 @@
-.cards {
-  overflow: hidden;
-  width: 300px;
-  background-color: white;
-  height: 425px;
+.mainDetailsGames {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
-  padding: 0 0 15px 0;
-  cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
-.dark-theme .cards {
-  background-color: #333;
-  color: #fff;
-  box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
-}
-
-.cards img {
+.mainGame {
   width: 100%;
-  height: 75%;
-}
-.cards h2 {
-  padding: 10px;
-  overflow: hidden;
-}
-.boxDate {
+  height: 100vh;
+  background-color: white;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.containerImage {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerImage img {
+  width: 75%;
+}
+.detailsGame {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.detailsGame h1 {
+  font-size: 40px;
+}
+.detailsGame p {
+  width: 550px;
   overflow: hidden;
+  font-size: 20px;
+  margin: 22px 0;
 }
 .platform {
   font-size: 25px;
@@ -41,19 +51,7 @@
   margin: 0 0 0 10px;
   overflow: hidden;
 }
-.rate {
-  font-size: 12px;
-  background-color: goldenrod;
-  padding: 5px;
-  border-radius: 5px;
-  margin: 0 2.5px;
-  font-weight: bold;
-  color: white;
-  font-family: Calibri, sans-serif;
-  margin: 0 15px 0 0;
-  overflow: hidden;
-}
-.containerButtons {
+.boxButtons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +64,7 @@
 }
 .btnShop {
   background-color: #daa520;
+  font-size: 22px;
   border: none;
   color: white;
   font-weight: bold;
@@ -82,6 +81,7 @@
 .btnReview {
   background-color: transparent;
   border: 1px solid #daa520;
+  font-size: 22px;
   color: #daa520;
   margin: 0px 0px 0px 15px;
   font-weight: bold;
@@ -94,4 +94,15 @@
 .btnReview:hover {
   box-shadow: none;
   transition: 0.2s ease-in-out;
+}
+.containerVideo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 30px 0;
+}
+.containerVideo iframe {
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }

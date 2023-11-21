@@ -1,11 +1,17 @@
 .registerContainer {
   width: 100%;
-  height: 658px;
+  height: 100vh;
   overflow: hidden;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.dark-theme .registerContainer {
+  background-color: #333;
+  color: #fff;
+}
+
 .register {
   width: 300px;
   border: 1px solid black;
@@ -18,9 +24,15 @@
   justify-content: center;
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
 }
+.dark-theme .register {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+}
+
 .register h1 {
   padding: 5px;
-  color: black;
 }
 .register input {
   width: 75%;

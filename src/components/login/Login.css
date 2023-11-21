@@ -1,11 +1,17 @@
 .loginContainer {
   width: 100%;
-  height: 658px;
+  height: 100vh;
   overflow: hidden;
   display: flex;
+  background-color: white;
   justify-content: center;
   align-items: center;
 }
+.dark-theme .loginContainer {
+  background-color: #333;
+  color: #fff;
+}
+
 .login {
   width: 300px;
   border: 1px solid black;
@@ -18,9 +24,15 @@
   justify-content: center;
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
 }
+.dark-theme .login {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid white;
+  box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
+}
+
 .login h1 {
   padding: 5px;
-  color: black;
 }
 .login input {
   width: 75%;
@@ -31,7 +43,6 @@
   border-radius: 5px;
   border: 1px solid black;
   background-color: rgb(212, 212, 212);
-  color: black;
   font-weight: bold;
 }
 .login input::placeholder {
@@ -60,7 +71,6 @@
 }
 .changeRegister h2 {
   padding: 10px;
-  color: black;
 }
 .changeRegister button {
   background-color: goldenrod;

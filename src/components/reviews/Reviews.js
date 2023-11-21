@@ -3,11 +3,13 @@ import Nav from "../nav/Nav";
 import { useParams } from "react-router";
 import "./Reviews.css";
 import { getGameDetails } from "../api/Api";
+import { useTheme } from "../services/themeContext/ThemeContext";
 
 const Reviews = () => {
   const { gameId } = useParams();
   const [gameName, setGameName] = useState("");
   const [allReviews, setAllReviews] = useState([]);
+  const { darkTheme } = useTheme();
 
   useEffect(() => {
     // Obtener detalles del juego usando la nueva función
@@ -56,19 +58,21 @@ const Reviews = () => {
   return (
     <>
       <Nav />
-      <div className="containerReviews">
-        <div className="titleGame">
-          <h1>{gameName}</h1>
+      <main className={`mainReviews ${darkTheme ? "dark-theme" : ""}`}>
+        <div className={`containerReviews ${darkTheme ? "dark-theme" : ""}`}>
+          <div className="titleGame">
+            <h1>{gameName}</h1>
+          </div>
+          <div className="containerUserReview">
+            {allReviews.map((review, index) => (
+              <div className="cardsReview" key={index}>
+                <h2>{review.username}</h2>
+                <p>{review.review}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="containerUserReview">
-          {allReviews.map((review, index) => (
-            <div className="cardsReview" key={index}>
-              <h2>{review.username}</h2>
-              <p>{review.review}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      </main>
     </>
   );
 };

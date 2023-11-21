@@ -3,6 +3,7 @@ import "./Register.css";
 import { useNavigate } from "react-router";
 import Nav from "../nav/Nav";
 import Message from "../message/Message";
+import { useTheme } from "../services/themeContext/ThemeContext";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -10,6 +11,7 @@ const Register = () => {
   const navigate = useNavigate();
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const { darkTheme } = useTheme();
 
   const showMessageForTime = (setter) => {
     setter(true);
@@ -49,8 +51,8 @@ const Register = () => {
       {showErrorMessage && (
         <Message message={"El usuario ya está registrado."} />
       )}
-      <div className="registerContainer">
-        <div className="register">
+      <div className={`registerContainer ${darkTheme ? "dark-theme" : ""}`}>
+        <div className={`register ${darkTheme ? "dark-theme" : ""}`}>
           <h1>Registrarse</h1>
           <input
             type="text"

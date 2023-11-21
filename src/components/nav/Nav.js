@@ -4,6 +4,7 @@ import { useAuth } from "../services/authContext/AuthContext";
 import "./Nav.css";
 import logo from "../../Logo.png";
 import { useNavigate } from "react-router";
+import ToggleTheme from "../toggleTheme/ToggleTheme";
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -27,13 +28,14 @@ const Nav = () => {
     <div id="nav">
       <img src={logo} className="App-logo" alt="logo" onClick={handleHome} />
       <div className="containerLogin">
+        <ToggleTheme />
         {isAuthenticated ? (
           <>
+            <button className="userButton" onClick={handleNavigateDash}>
+              Mi cuenta
+            </button>
             <button className="logout" onClick={handleLogout}>
               Cerrar Sesión
-            </button>
-            <button className="userButton" onClick={handleNavigateDash}>
-              {currentUser}
             </button>
           </>
         ) : (

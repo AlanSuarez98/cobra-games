@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import { getAllGames } from "../api/Api.js";
 import Contain from "../containProducts/Contain";
 import Nav from "../nav/Nav";
+import Footer from "../footer/Footer";
+import { useTheme } from "../services/themeContext/ThemeContext";
 
 const Home = () => {
   const imgHead =
@@ -13,6 +15,7 @@ const Home = () => {
   const [games, setGames] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isSearchActive, setIsSearchActive] = useState(false);
+  const { darkTheme } = useTheme();
 
   useEffect(() => {
     async function fetchGames() {
@@ -59,9 +62,12 @@ const Home = () => {
           />
         </div>
       </header>
-      <main>
+      <main className={`main ${darkTheme ? "dark-theme" : ""}`}>
         <Contain games={games} />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

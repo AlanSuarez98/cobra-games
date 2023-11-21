@@ -7,6 +7,7 @@ import "./Dashboard.css";
 import { useAuth } from "../services/authContext/AuthContext";
 import { getGameDetails, getAllGames } from "../api/Api";
 import Message from "../message/Message";
+import { useTheme } from "../services/themeContext/ThemeContext";
 
 const Dashboard = () => {
   const { currentUser } = useAuth();
@@ -15,6 +16,7 @@ const Dashboard = () => {
   const [adminGames, setAdminGames] = useState([]);
   const userType =
     localStorage.getItem(`type_${currentUser}`) || "Usuario Común";
+  const { darkTheme } = useTheme();
 
   const handleAction = async (selectedOption, gameId) => {
     if (selectedOption === "reembolsar") {
@@ -138,34 +140,36 @@ const Dashboard = () => {
   return (
     <>
       <Nav />
-      {showMessage && <Message message={`¡Bienvenido ${currentUser}!`} />}
-      <div className="bodyDashboard">
-        <div className="dashboard">
-          <h1>Panel de Control</h1>
-          <div className="boxLists">
-            <div className="listCards">
-              {currentUser === "sysadmin" && <UserList users={allUsers} />}
-              {currentUser === "admin" && <GameList games={adminGames} />}
-              {currentUser !== "sysadmin" &&
-                currentUser !== "admin" &&
-                userGames.map((game) => (
-                  <ProductList
-                    key={game.id}
-                    title={game.name}
-                    gameId={game.id}
-                    gameCount={game.gameCount}
-                    review={game.review}
-                    userType={userType}
-                    onAction={(selectedOption) =>
-                      handleAction(selectedOption, game.id)
-                    }
-                    refunded={game.refunded}
-                  />
-                ))}
+      <main className={`mainDashboard ${darkTheme ? "dark-theme" : ""}`}>
+        {showMessage && <Message message={`¡Bienvenido ${currentUser}!`} />}
+        <div className={`bodyDashboard ${darkTheme ? "dark-theme" : ""}`}>
+          <div className={`dashboard ${darkTheme ? "dark-theme" : ""}`}>
+            <h1>Panel de Control</h1>
+            <div className={`boxLists ${darkTheme ? "dark-theme" : ""}`}>
+              <div className="listCards">
+                {currentUser === "sysadmin" && <UserList users={allUsers} />}
+                {currentUser === "admin" && <GameList games={adminGames} />}
+                {currentUser !== "sysadmin" &&
+                  currentUser !== "admin" &&
+                  userGames.map((game) => (
+                    <ProductList
+                      key={game.id}
+                      title={game.name}
+                      gameId={game.id}
+                      gameCount={game.gameCount}
+                      review={game.review}
+                      userType={userType}
+                      onAction={(selectedOption) =>
+                        handleAction(selectedOption, game.id)
+                      }
+                      refunded={game.refunded}
+                    />
+                  ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };

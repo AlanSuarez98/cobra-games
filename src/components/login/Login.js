@@ -5,6 +5,7 @@ import Nav from "../nav/Nav";
 import Message from "../message/Message";
 
 import "./Login.css";
+import { useTheme } from "../services/themeContext/ThemeContext";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -13,6 +14,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [showMessage, setShowMessage] = useState(false);
   const messageRef = useRef(null);
+  const { darkTheme } = useTheme();
 
   const showMessageForTime = () => {
     setShowMessage(true);
@@ -54,8 +56,8 @@ const Login = () => {
       {showMessage && (
         <Message message={"Credenciales incorrectas."} ref={messageRef} />
       )}
-      <div className="loginContainer">
-        <div className="login">
+      <div className={`loginContainer ${darkTheme ? "dark-theme" : ""}`}>
+        <div className={`login ${darkTheme ? "dark-theme" : ""}`}>
           <h1>Iniciar Sesion</h1>
           <input
             type="text"

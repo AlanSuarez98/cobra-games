@@ -9,6 +9,7 @@ import Nav from "./components/nav/Nav";
 import Protected from "./components/protected/Protected";
 import { useAuth } from "./components/services/authContext/AuthContext";
 import Reviews from "./components/reviews/Reviews";
+import GameDetails from "./components/gameDetails/GameDetails";
 
 function App() {
   const { isAuthenticated, login, logout } = useAuth();
@@ -23,7 +24,7 @@ function App() {
       localStorage.setItem("users", JSON.stringify(predefinedUsers));
     }
   }, []);
-  
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -37,10 +38,10 @@ function App() {
       path: "/registrarse",
       element: <Register />,
     },
-    {
+    /*{
       path: "*",
       element: <Error />,
-    },
+    },*/
     {
       path: "/dashboard",
       element: (
@@ -52,6 +53,10 @@ function App() {
     {
       path: "/reviews/:gameId",
       element: <Reviews />,
+    },
+    {
+      path: "/game/:gameId",
+      element: <GameDetails />,
     },
   ]);
 

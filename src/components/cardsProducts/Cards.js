@@ -1,16 +1,14 @@
 import "./Cards.css";
 import Platforms from "../platforms/Platforms";
 import { useNavigate } from "react-router";
-import { useAuth } from "../services/authContext/AuthContext";
 import { useEffect, useState } from "react";
-import Message from "../message/Message";
+import { useTheme } from "../services/themeContext/ThemeContext";
 
 const Cards = (props) => {
   const { title, platforms, rating, image, id } = props;
-  const { isAuthenticated, currentUser } = useAuth();
   const navigate = useNavigate();
   const [gameStock, setGameStock] = useState("stock");
-  const [purchaseMessage, setPurchaseMessage] = useState(null);
+  const { darkTheme } = useTheme();
 
   const showGameStock = () => {
     const storedStocks = JSON.parse(localStorage.getItem("Stocks")) || {};
@@ -36,56 +34,12 @@ const Cards = (props) => {
   }, [id]);
   console.log("Plataformas únicas:", uniquePlatforms);
 
-  const handleShop = (e) => {
-    const id = e.currentTarget.getAttribute("data-id");
-    if (!isAuthenticated) {
-      navigate("/login");
-    } else {
-      const purchases = JSON.parse(localStorage.getItem("purchases")) || [];
-
-      // Verificar si el juego ya está en las compras del usuario
-      const existingPurchase = purchases.find(
-        (purchase) => purchase.id === id && purchase.username === currentUser
-      );
-
-      if (existingPurchase) {
-        existingPurchase.gameCount++;
-      } else {
-        const newPurchase = {
-          id,
-          username: currentUser,
-          gameCount: 1,
-        };
-
-        purchases.push(newPurchase);
-        localStorage.setItem("purchases", JSON.stringify(purchases));
-
-        // Si el usuario es "admin", también agregar la compra al arreglo específico
-        if (currentUser === "admin") {
-          const adminGames =
-            JSON.parse(localStorage.getItem("adminGames")) || [];
-          const updatedAdminGames = [...adminGames, newPurchase];
-          localStorage.setItem("adminGames", JSON.stringify(updatedAdminGames));
-        }
-      }
-
-      // Actualiza el arreglo de compras en el localStorage
-      localStorage.setItem(
-        `purchases_${currentUser}`,
-        JSON.stringify(purchases)
-      );
-      setPurchaseMessage("Juego comprado con éxito.");
-      setTimeout(() => setPurchaseMessage(null), 3000);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
-  const handleViewReviews = () => {
-    navigate(`/reviews/${id}`);
+  const handleDetails = () => {
+    navigate(`/game/${id}`);
   };
 
   return (
-    <div className="cards">
+    <div className={`cards ${darkTheme ? "dark-theme" : ""}`}>
       <img src={image} alt="" />
       <h2>{title}</h2>
       <div className="boxDate">
@@ -127,14 +81,15 @@ const Cards = (props) => {
       </div>
       <p className="stock">{gameStock}</p>
       <div className="containerButtons">
-        <button className="btnShop" data-id={id} onClick={(e) => handleShop(e)}>
-          Comprar
-        </button>
-        <button className="btnReview" onClick={handleViewReviews}>
-          Ver Reseña
+        <button
+          className="btnShop"
+          onClick={() => {
+            handleDetails(id);
+          }}
+        >
+          detalles
         </button>
       </div>
-      {purchaseMessage && <Message message={purchaseMessage} />}
     </div>
   );
 };

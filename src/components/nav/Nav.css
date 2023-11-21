@@ -67,6 +67,7 @@
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  margin: 0 25px;
 }
 .logout:hover {
   box-shadow: none;
@@ -75,7 +76,7 @@
 }
 .userButton {
   display: flex;
-  margin: 0 25px;
+  margin: 0 5px;
   background-color: goldenrod;
   padding: 5px 10px;
   border-radius: 5px;

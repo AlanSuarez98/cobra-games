@@ -1,0 +1,44 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+
+.theme-btn {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.theme-btn.dark {
+  background-color: rgba(255, 255, 255, 0.82);
+  color: #fff;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+.theme-btn.dark:hover {
+  background-color: white;
+}
+.sun {
+  color: goldenrod;
+}
+.moon {
+  color: white;
+}
+.theme-btn.light {
+  background-color: #33333344;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+.theme-btn.light:hover {
+  background-color: #333;
+}

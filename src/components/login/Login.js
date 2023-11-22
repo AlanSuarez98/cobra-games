@@ -50,6 +50,12 @@ const Login = () => {
     navigate("/registrarse");
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleUserLogin();
+    }
+  };
+
   return (
     <>
       <Nav />
@@ -64,12 +70,14 @@ const Login = () => {
             placeholder="usuario"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
           <input
             type="password"
             placeholder="contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
           <button onClick={handleUserLogin}>Iniciar Sesion</button>
           <div className="changeRegister">

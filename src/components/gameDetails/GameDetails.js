@@ -35,7 +35,8 @@ const GameDetails = () => {
     if (!isAuthenticated) {
       navigate("/login");
     } else {
-      const purchases = JSON.parse(localStorage.getItem("purchases")) || [];
+      const purchases =
+        JSON.parse(localStorage.getItem(`purchases_${currentUser}`)) || [];
 
       // Verificar si el juego ya está en las compras del usuario
       const existingPurchase = purchases.find(
@@ -52,7 +53,10 @@ const GameDetails = () => {
         };
 
         purchases.push(newPurchase);
-        localStorage.setItem("purchases", JSON.stringify(purchases));
+        localStorage.setItem(
+          `purchases_${currentUser}`,
+          JSON.stringify(purchases)
+        );
 
         // Si el usuario es "admin", también agregar la compra al arreglo específico
         if (currentUser === "admin") {

@@ -42,6 +42,12 @@ const Register = () => {
     navigate("/login");
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleRegister();
+    }
+  };
+
   return (
     <>
       <Nav />
@@ -59,12 +65,14 @@ const Register = () => {
             placeholder="usuario"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
           <input
             type="password"
             placeholder="contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
           <button onClick={handleRegister}>Registrarse</button>
           <div className="changeLogin">

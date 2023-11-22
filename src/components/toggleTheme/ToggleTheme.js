@@ -14,9 +14,9 @@ const ToggleTheme = () => {
         onClick={toggleTheme}
       >
         {darkTheme ? (
-          <Icon css={"sun"} icon={faSun} />
-        ) : (
           <Icon css={"moon"} icon={faMoon} />
+        ) : (
+          <Icon css={"sun"} icon={faSun} />
         )}
       </button>
     </div>

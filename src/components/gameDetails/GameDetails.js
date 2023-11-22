@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { useAuth } from "../services/authContext/AuthContext";
 import { getGameDetails } from "../api/Api";
+import { useTheme } from "../services/themeContext/ThemeContext";
 
 const GameDetails = () => {
   const [purchaseMessage, setPurchaseMessage] = useState(null);
@@ -13,11 +14,13 @@ const GameDetails = () => {
   const navigate = useNavigate();
   const { gameId } = useParams();
   const [gameDetails, setGameDetails] = useState(null);
+  const { darkTheme } = useTheme();
 
   useEffect(() => {
     const fetchGameDetails = async () => {
       try {
         const details = await getGameDetails(gameId);
+        console.log("Detalles del juego:", details); // Agrega este console.log
         setGameDetails(details);
       } catch (error) {
         console.error("Error al obtener detalles del juego:", error);
@@ -79,22 +82,75 @@ const GameDetails = () => {
     // Si los detalles del juego aún no se han cargado, puedes mostrar un mensaje de carga o simplemente no renderizar nada.
     return <p>Cargando detalles del juego...</p>;
   }
+  const descriptionGame = gameDetails.description_raw;
+
+  const paragraphs = descriptionGame
+    .split(". ")
+    .reduce((acc, sentence, index) => {
+      const paragraphIndex = Math.floor(index / 6);
+      if (!acc[paragraphIndex]) {
+        acc[paragraphIndex] = [];
+      }
+      acc[paragraphIndex].push(sentence);
+      return acc;
+    }, [])
+    .map((paragraph, index) => <p key={index}>{paragraph.join(". ")}</p>);
+  const uniquePlatforms = {};
+  gameDetails.platforms.forEach((platform) => {
+    const platformName = platform.platform.name;
+    if (!uniquePlatforms[platformName]) {
+      uniquePlatforms[platformName] = true;
+    }
+  });
   return (
     <>
       <Nav />
-      <main className="mainDetailsGames">
-        <div className="mainGame">
+      <main className={`mainDetailsGames ${darkTheme ? "dark-theme" : ""}`}>
+        <div className={`mainGame ${darkTheme ? "dark-theme" : ""}`}>
           <div className="containerImage">
-            <img src={gameDetails.image} alt="" />
+            <img src={gameDetails.background_image} alt="" />
           </div>
           <div className="detailsGame">
-            <h1>{gameDetails.title}</h1>
-            <p>{gameDetails.description}</p>
-            <Platforms platforms={gameDetails.platforms} />
+            <h1>{gameDetails.name}</h1>
+            <p>{paragraphs}</p>
+            <div className="boxPlatform">
+              {Object.keys(uniquePlatforms).map((platformName) => {
+                let icon = null;
+                let namePlatforms = null;
+
+                // Asigna el ícono adecuado según el nombre de la plataforma
+                switch (platformName) {
+                  case "PlayStation 5":
+                    namePlatforms = "PS5";
+                    icon = <Platforms namePlatforms={namePlatforms} />;
+                    break;
+                  case "PlayStation 4":
+                    namePlatforms = "PS4";
+                    icon = <Platforms namePlatforms={namePlatforms} />;
+                    break;
+                  case "PlayStation 3":
+                    namePlatforms = "PS3";
+                    icon = <Platforms namePlatforms={namePlatforms} />;
+                    break;
+                  case "Xbox One":
+                    namePlatforms = "XBOX";
+                    icon = <Platforms namePlatforms={namePlatforms} />;
+                    break;
+                  case "PC":
+                    namePlatforms = "PC";
+                    icon = <Platforms namePlatforms={namePlatforms} />;
+                    break;
+                  default:
+                    break;
+                }
+
+                return icon && <span key={platformName}>{icon}</span>;
+              })}
+            </div>
             <div className="boxButtons">
               <button
                 className="btnShop"
-                data-id={gameId}
+                data-id={gameDetails.id}
                 onClick={(e) => handleShop(e)}
               >
                 Comprar
@@ -107,17 +163,6 @@ const GameDetails = () => {
               </button>
             </div>
           </div>
-        </div>
-        <div className="containerVideo">
-          <iframe
-            width="790"
-            height="444"
-            src={gameDetails.videoUrl}
-            title={`${gameDetails.title} Trailer`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
         </div>
       </main>
       <Footer />

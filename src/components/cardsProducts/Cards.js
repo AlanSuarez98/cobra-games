@@ -82,12 +82,12 @@ const Cards = (props) => {
       <p className="stock">{gameStock}</p>
       <div className="containerButtons">
         <button
-          className="btnShop"
+          className="btnShops"
           onClick={() => {
             handleDetails(id);
           }}
         >
-          detalles
+          Comprar
         </button>
       </div>
     </div>

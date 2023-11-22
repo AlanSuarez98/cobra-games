@@ -1,5 +1,6 @@
 .mainDetailsGames {
   width: 100%;
+  height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,12 +8,18 @@
 }
 .mainGame {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.dark-theme .mainGame {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
+}
+
 .containerImage {
   width: 50%;
   height: 100vh;
@@ -33,9 +40,12 @@
 }
 .detailsGame h1 {
   font-size: 40px;
+  height: 100px;
 }
 .detailsGame p {
   width: 550px;
+  height: 600px;
+  background-color: transparent;
   overflow: hidden;
   font-size: 20px;
   margin: 22px 0;
@@ -105,4 +115,9 @@
 .containerVideo iframe {
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+}
+.boxPlatform {
+  display: flex;
+  height: 75px;
+  font-size: 30px;
 }

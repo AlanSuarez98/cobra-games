@@ -1,7 +1,7 @@
 @media (min-width: 0px) and (max-width: 320px) {
   .mainDetailsGames {
     width: 100%;
-    height: 300vh;
+    height: 950px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,7 @@
   }
   .mainGame {
     width: 100%;
-    height: 300vh;
+    height: 950px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
 
   .containerImage {
     width: 100%;
-    height: 50vh;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,14 +34,14 @@
   }
   .detailsGame {
     width: 85%;
-    height: 125vh;
+    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   .detailsGame h1 {
-    font-size: 40px;
+    font-size: 1.7rem;
     height: 100px;
   }
   .detailsGame p {
@@ -49,7 +49,7 @@
     height: 600px;
     background-color: transparent;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 1rem;
     margin: 22px 0;
   }
   .platform {
@@ -128,7 +128,7 @@
 @media (min-width: 321px) and (max-width: 375px) {
   .mainDetailsGames {
     width: 100%;
-    height: 300vh;
+    height: 950px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,7 +136,7 @@
   }
   .mainGame {
     width: 100%;
-    height: 300vh;
+    height: 950px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -151,7 +151,7 @@
 
   .containerImage {
     width: 100%;
-    height: 50vh;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,14 +161,14 @@
   }
   .detailsGame {
     width: 85%;
-    height: 125vh;
+    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   .detailsGame h1 {
-    font-size: 40px;
+    font-size: 1.7rem;
     height: 100px;
   }
   .detailsGame p {
@@ -176,7 +176,7 @@
     height: 600px;
     background-color: transparent;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 1rem;
     margin: 22px 0;
   }
   .platform {
@@ -255,7 +255,7 @@
 @media (min-width: 376px) and (max-width: 425px) {
   .mainDetailsGames {
     width: 100%;
-    height: 300vh;
+    height: 950px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -263,7 +263,7 @@
   }
   .mainGame {
     width: 100%;
-    height: 300vh;
+    height: 950px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -278,7 +278,7 @@
 
   .containerImage {
     width: 100%;
-    height: 50vh;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,14 +288,14 @@
   }
   .detailsGame {
     width: 85%;
-    height: 125vh;
+    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   .detailsGame h1 {
-    font-size: 40px;
+    font-size: 1.7rem;
     height: 100px;
   }
   .detailsGame p {
@@ -303,7 +303,7 @@
     height: 600px;
     background-color: transparent;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 1rem;
     margin: 22px 0;
   }
   .platform {

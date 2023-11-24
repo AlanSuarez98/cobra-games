@@ -38,10 +38,10 @@ function App() {
       path: "/registrarse",
       element: <Register />,
     },
-    /*{
+    {
       path: "*",
       element: <Error />,
-    },*/
+    },
     {
       path: "/dashboard",
       element: (

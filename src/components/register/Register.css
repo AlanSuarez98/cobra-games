@@ -1,79 +1,572 @@
-.registerContainer {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.dark-theme .registerContainer {
-  background-color: #333;
-  color: #fff;
+@media (min-width: 0px) and (max-width: 320px) {
+  .registerContainer {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dark-theme .registerContainer {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .register {
+    width: 300px;
+    border: 1px solid black;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  .dark-theme .register {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+  }
+
+  .register h1 {
+    padding: 5px;
+  }
+  .register input {
+    width: 75%;
+    height: 25px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(212, 212, 212);
+    color: black;
+    font-weight: bold;
+  }
+  .register input::placeholder {
+    color: rgba(0, 0, 0, 0.74);
+  }
+  .register button {
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  .register button:hover {
+    box-shadow: none;
+    background-color: rgb(212, 212, 212);
+    transition: 0.2s ease-in-out;
+  }
+  .changeLogin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 0 0;
+  }
+  .changeLogin h2 {
+    padding: 10px;
+  }
+  .changeLogin button {
+    background-color: goldenrod;
+    transition: 0.2s ease-in-out;
+  }
 }
 
-.register {
-  width: 300px;
-  border: 1px solid black;
-  height: 450px;
-  background-color: white;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
-}
-.dark-theme .register {
-  background-color: #333;
-  color: #fff;
-  box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
-  border: 1px solid white;
+@media (min-width: 321px) and (max-width: 375px) {
+  .registerContainer {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dark-theme .registerContainer {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .register {
+    width: 300px;
+    border: 1px solid black;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  .dark-theme .register {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+  }
+
+  .register h1 {
+    padding: 5px;
+  }
+  .register input {
+    width: 75%;
+    height: 25px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(212, 212, 212);
+    color: black;
+    font-weight: bold;
+  }
+  .register input::placeholder {
+    color: rgba(0, 0, 0, 0.74);
+  }
+  .register button {
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  .register button:hover {
+    box-shadow: none;
+    background-color: rgb(212, 212, 212);
+    transition: 0.2s ease-in-out;
+  }
+  .changeLogin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 0 0;
+  }
+  .changeLogin h2 {
+    padding: 10px;
+  }
+  .changeLogin button {
+    background-color: goldenrod;
+    transition: 0.2s ease-in-out;
+  }
 }
 
-.register h1 {
-  padding: 5px;
+@media (min-width: 376px) and (max-width: 425px) {
+  .registerContainer {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dark-theme .registerContainer {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .register {
+    width: 300px;
+    border: 1px solid black;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  .dark-theme .register {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+  }
+
+  .register h1 {
+    padding: 5px;
+  }
+  .register input {
+    width: 75%;
+    height: 25px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(212, 212, 212);
+    color: black;
+    font-weight: bold;
+  }
+  .register input::placeholder {
+    color: rgba(0, 0, 0, 0.74);
+  }
+  .register button {
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  .register button:hover {
+    box-shadow: none;
+    background-color: rgb(212, 212, 212);
+    transition: 0.2s ease-in-out;
+  }
+  .changeLogin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 0 0;
+  }
+  .changeLogin h2 {
+    padding: 10px;
+  }
+  .changeLogin button {
+    background-color: goldenrod;
+    transition: 0.2s ease-in-out;
+  }
 }
-.register input {
-  width: 75%;
-  height: 25px;
-  margin: 10px;
-  padding: 5px;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid black;
-  background-color: rgb(212, 212, 212);
-  color: black;
-  font-weight: bold;
+@media (min-width: 426px) and (max-width: 768px) {
+  .registerContainer {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dark-theme .registerContainer {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .register {
+    width: 300px;
+    border: 1px solid black;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  .dark-theme .register {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+  }
+
+  .register h1 {
+    padding: 5px;
+  }
+  .register input {
+    width: 75%;
+    height: 25px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(212, 212, 212);
+    color: black;
+    font-weight: bold;
+  }
+  .register input::placeholder {
+    color: rgba(0, 0, 0, 0.74);
+  }
+  .register button {
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  .register button:hover {
+    box-shadow: none;
+    background-color: rgb(212, 212, 212);
+    transition: 0.2s ease-in-out;
+  }
+  .changeLogin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 0 0;
+  }
+  .changeLogin h2 {
+    padding: 10px;
+  }
+  .changeLogin button {
+    background-color: goldenrod;
+    transition: 0.2s ease-in-out;
+  }
 }
-.register input::placeholder {
-  color: rgba(0, 0, 0, 0.74);
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .registerContainer {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dark-theme .registerContainer {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .register {
+    width: 300px;
+    border: 1px solid black;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  .dark-theme .register {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+  }
+
+  .register h1 {
+    padding: 5px;
+  }
+  .register input {
+    width: 75%;
+    height: 25px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(212, 212, 212);
+    color: black;
+    font-weight: bold;
+  }
+  .register input::placeholder {
+    color: rgba(0, 0, 0, 0.74);
+  }
+  .register button {
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  .register button:hover {
+    box-shadow: none;
+    background-color: rgb(212, 212, 212);
+    transition: 0.2s ease-in-out;
+  }
+  .changeLogin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 0 0;
+  }
+  .changeLogin h2 {
+    padding: 10px;
+  }
+  .changeLogin button {
+    background-color: goldenrod;
+    transition: 0.2s ease-in-out;
+  }
 }
-.register button {
-  padding: 5px 25px;
-  border-radius: 5px;
-  border: 1px solid black;
-  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .registerContainer {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dark-theme .registerContainer {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .register {
+    width: 300px;
+    border: 1px solid black;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  .dark-theme .register {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+  }
+
+  .register h1 {
+    padding: 5px;
+  }
+  .register input {
+    width: 75%;
+    height: 25px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(212, 212, 212);
+    color: black;
+    font-weight: bold;
+  }
+  .register input::placeholder {
+    color: rgba(0, 0, 0, 0.74);
+  }
+  .register button {
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  .register button:hover {
+    box-shadow: none;
+    background-color: rgb(212, 212, 212);
+    transition: 0.2s ease-in-out;
+  }
+  .changeLogin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 0 0;
+  }
+  .changeLogin h2 {
+    padding: 10px;
+  }
+  .changeLogin button {
+    background-color: goldenrod;
+    transition: 0.2s ease-in-out;
+  }
 }
-.register button:hover {
-  box-shadow: none;
-  background-color: rgb(212, 212, 212);
-  transition: 0.2s ease-in-out;
-}
-.changeLogin {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 50px 0 0 0;
-}
-.changeLogin h2 {
-  padding: 10px;
-}
-.changeLogin button {
-  background-color: goldenrod;
-  transition: 0.2s ease-in-out;
+
+@media (min-width: 1441px) and (max-width: 2560px) {
+  .registerContainer {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dark-theme .registerContainer {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .register {
+    width: 300px;
+    border: 1px solid black;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  .dark-theme .register {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+  }
+
+  .register h1 {
+    padding: 5px;
+  }
+  .register input {
+    width: 75%;
+    height: 25px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(212, 212, 212);
+    color: black;
+    font-weight: bold;
+  }
+  .register input::placeholder {
+    color: rgba(0, 0, 0, 0.74);
+  }
+  .register button {
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  .register button:hover {
+    box-shadow: none;
+    background-color: rgb(212, 212, 212);
+    transition: 0.2s ease-in-out;
+  }
+  .changeLogin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 0 0;
+  }
+  .changeLogin h2 {
+    padding: 10px;
+  }
+  .changeLogin button {
+    background-color: goldenrod;
+    transition: 0.2s ease-in-out;
+  }
 }

@@ -1,4 +1,5 @@
 import Nav from "../nav/Nav";
+import Message from "../message/Message";
 import Platforms from "../platforms/Platforms";
 import "./GameDetails.css";
 import Footer from "../footer/Footer";
@@ -109,6 +110,7 @@ const GameDetails = () => {
   return (
     <>
       <Nav />
+      {purchaseMessage && <Message message={purchaseMessage} />}
       <main className={`mainDetailsGames ${darkTheme ? "dark-theme" : ""}`}>
         <div className={`mainGame ${darkTheme ? "dark-theme" : ""}`}>
           <div className="containerImage">

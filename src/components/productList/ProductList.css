@@ -1,57 +1,434 @@
-.productCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 0 10px 30px 10px;
-}
-.card {
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.dateProduct {
-  width: 135px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@media (min-width: 0px) and (max-width: 320px) {
+  .productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 10px 30px 10px;
+  }
+  .productCard h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dateProduct {
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .reseña {
+    max-width: 350px;
+    text-align: center;
+  }
+  .btnSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btnSelect select {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .containerReview {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerButtons {
+    display: flex;
+    justify-content: center;
+  }
+  .btnModifyReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .btnConfirmReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .textReview {
+    width: 275px;
+    min-height: 50px;
+    max-height: 100px;
+    resize: none;
+  }
 }
 
-.reseña {
-  max-width: 350px;
-  text-align: center;
+@media (min-width: 321px) and (max-width: 375px) {
+  .productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 10px 30px 10px;
+  }
+  .productCard h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dateProduct {
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .reseña {
+    max-width: 350px;
+    text-align: center;
+  }
+  .btnSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btnSelect select {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .containerReview {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerButtons {
+    display: flex;
+    justify-content: center;
+  }
+  .btnModifyReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .btnConfirmReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .textReview {
+    width: 275px;
+    min-height: 50px;
+    max-height: 100px;
+    resize: none;
+  }
 }
-.btnSelect {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+@media (min-width: 376px) and (max-width: 425px) {
+  .productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 10px 30px 10px;
+  }
+  .productCard h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dateProduct {
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .reseña {
+    max-width: 350px;
+    text-align: center;
+  }
+  .btnSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btnSelect select {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .containerReview {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerButtons {
+    display: flex;
+    justify-content: center;
+  }
+  .btnModifyReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .btnConfirmReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .textReview {
+    width: 275px;
+    min-height: 50px;
+    max-height: 100px;
+    resize: none;
+  }
 }
-.btnSelect select {
-  text-align: center;
-  margin: 5px 0;
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 10px 30px 10px;
+  }
+  .card {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dateProduct {
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .reseña {
+    max-width: 350px;
+    text-align: center;
+  }
+  .btnSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btnSelect select {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .containerReview {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerButtons {
+    display: flex;
+    justify-content: center;
+  }
+  .btnModifyReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .btnConfirmReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .textReview {
+    width: 275px;
+    min-height: 50px;
+    max-height: 100px;
+    resize: none;
+  }
 }
-.containerReview {
-  display: flex;
-  flex-direction: column;
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 10px 30px 10px;
+  }
+  .card {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dateProduct {
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .reseña {
+    max-width: 350px;
+    text-align: center;
+  }
+  .btnSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btnSelect select {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .containerReview {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerButtons {
+    display: flex;
+    justify-content: center;
+  }
+  .btnModifyReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .btnConfirmReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .textReview {
+    width: 275px;
+    min-height: 50px;
+    max-height: 100px;
+    resize: none;
+  }
 }
-.containerButtons {
-  display: flex;
-  justify-content: center;
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 10px 30px 10px;
+  }
+  .card {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dateProduct {
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .reseña {
+    max-width: 350px;
+    text-align: center;
+  }
+  .btnSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btnSelect select {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .containerReview {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerButtons {
+    display: flex;
+    justify-content: center;
+  }
+  .btnModifyReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .btnConfirmReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .textReview {
+    width: 275px;
+    min-height: 50px;
+    max-height: 100px;
+    resize: none;
+  }
 }
-.btnModifyReview {
-  padding: 5px 10px;
-  margin: 5px 0px 0px;
-}
-.btnConfirmReview {
-  padding: 5px 10px;
-  margin: 5px 0px 0px;
-}
-.textReview {
-  width: 275px;
-  min-height: 50px;
-  max-height: 100px;
-  resize: none;
+
+@media (min-width: 1441px) and (max-width: 2560px) {
+  .productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 10px 30px 10px;
+  }
+  .card {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dateProduct {
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .reseña {
+    max-width: 350px;
+    text-align: center;
+  }
+  .btnSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btnSelect select {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .containerReview {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerButtons {
+    display: flex;
+    justify-content: center;
+  }
+  .btnModifyReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .btnConfirmReview {
+    padding: 5px 10px;
+    margin: 5px 0px 0px;
+  }
+  .textReview {
+    width: 275px;
+    min-height: 50px;
+    max-height: 100px;
+    resize: none;
+  }
 }
